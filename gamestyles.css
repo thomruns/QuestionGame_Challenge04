@@ -1,11 +1,27 @@
 .correct-answer {
   font-size: 25px;
   color: blue;
+  background-color: yellow;
   font-weight: bold;
+  width: 350px;
+  height: 100px;
+  border-radius: 10px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .wrong-answer {
   font-size: 25px;
   color: red;
+  background-color: black;
   font-weight: bold;
+  width: 350px;
+  height: 100px;
+  border-radius: 10px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

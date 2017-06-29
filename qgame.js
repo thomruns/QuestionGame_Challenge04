@@ -1,7 +1,7 @@
 
 
 /*
-In this  constructor, three arguments are required: the question being asked, an array consisting of possible answers and including the correct one, and the index number of the correct answer
+In this  constructor, three arguments are required: the question being asked, an array consisting of possible answers -- including the correct one -- and the array index number of the correct answer
 */
 var Question = function(question , possAnswersArray, correctAnswerIndex) {
   this.question = question;
@@ -25,10 +25,12 @@ var q3 = new Question('What ocean borders California?' , ['1 - Indian' , '2 - Ar
 
 var q4 = new Question('Who owned Lassie?' , ['1 - Billy' , '2 - Timmy', '3 - Judy' , '4 - Janey'] , 1);
 
+var q5 = new Question('What colors are on the US flag?' , ['1 - Red, Blue, Green' , '2 - Yellow, Orange, Purple' , '3 - Green, Magenta, Blue' , '4 - Red, White, Blue' , '5 - Solid Brown'] , 3 );
+
 //end of Question instances ///////////////////////////////////////
 
-//declare an array of of all the newly-created Question objects h
-var qArray = [[q1] , [q2] , [q3], [q4]];
+//declare an array of of all the newly-created Question objects 
+var qArray = [[q1] , [q2] , [q3], [q4], [q5]];
 
 /*
 This function takes a variable which holds an array and based upon its length, picks a random number between 1 and the length of the array and returns a variable rand.
@@ -72,10 +74,12 @@ if((testGuess - 1) === correctAnswer) {
   console.log('You are correct!');
   var winningMessage = "You got it right!";
   document.querySelector('.correct-answer').textContent = (winningMessage);
+  document.querySelector('.wrong-answer').style.display = ('none');
 } else {
   console.log ('Sorry, wrong answer. Reload page.');
   var losingMessage = "Sorry, wrong answer. Reload and try again!";
   document.querySelector('.wrong-answer').textContent = (losingMessage);
+  document.querySelector('.correct-answer').style.display = ('none');
 };
 
 
