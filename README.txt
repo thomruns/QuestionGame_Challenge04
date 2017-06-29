@@ -12,3 +12,6 @@ Needed next: prompt functionality
 6/29/17 1:07 pm Functionality added:
   Prompt coded
   page coded w response to correct/incorrect answer
+
+6/29/17 1:37pm Added:
+  fifth question to test functionality of Question constructor
