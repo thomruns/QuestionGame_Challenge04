@@ -8,3 +8,7 @@ First commit: some functionality
     if hard-coded into function, correct answer response
     is returned.
 Needed next: prompt functionality
+
+6/29/17 1:07 pm Functionality added:
+  Prompt coded
+  page coded w response to correct/incorrect answer

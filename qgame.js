@@ -1,5 +1,7 @@
+
+
 /*
-In this constructor, three arguments are required: the question being asked, an array consisting of possible answers and including the correct one, and the index number of the correct answer
+In this  constructor, three arguments are required: the question being asked, an array consisting of possible answers and including the correct one, and the index number of the correct answer
 */
 var Question = function(question , possAnswersArray, correctAnswerIndex) {
   this.question = question;
@@ -60,15 +62,20 @@ function loopAnswers(arr){
 }
 loopAnswers(possAnswers);
 
-
+//var username = prompt("What is your answer?");
+//console.log(username);
 
 
 //test for correct guess
-testGuess = 2;
+testGuess = prompt("Enter the number of the correct answer:");
 if((testGuess - 1) === correctAnswer) {
   console.log('You are correct!');
+  var winningMessage = "You got it right!";
+  document.querySelector('.correct-answer').textContent = (winningMessage);
 } else {
-  console.log ('Guess again');
+  console.log ('Sorry, wrong answer. Reload page.');
+  var losingMessage = "Sorry, wrong answer. Reload and try again!";
+  document.querySelector('.wrong-answer').textContent = (losingMessage);
 };
 
 
