@@ -15,7 +15,7 @@ Question.prototype.randomPick = function() {
 }
 */
 //Use the constructor to create instances of Question //////////////
-var q1 = new Question('What year is it?' , [1990 , 2000, 2017 , 1984], 2);
+var q1 = new Question('What year is it?' , ['1 - 1990' , '2 - 2000' , '3 - 2017' , '4 - 1984'], 2);
 
 var q2 = new Question('What month does the 4th of July fall in?' , ['1 - January' , '2 - April', '3 - July', '4 - September' , '5 - December'] , 2);
 
@@ -25,42 +25,51 @@ var q4 = new Question('Who owned Lassie?' , ['1 - Billy' , '2 - Timmy', '3 - Jud
 
 //end of Question instances ///////////////////////////////////////
 
-//declare an array of of all the newly-created Question objects
+//declare an array of of all the newly-created Question objects h
 var qArray = [[q1] , [q2] , [q3], [q4]];
-//var sampleArray = [1 , 2 , 3 , 4, 5]; //TEST ONLY
-//var newSampleArray = [1,2,3,4,5,6,7,8,9];//TEST ONLY
 
-
+/*
+This function takes a variable which holds an array and based upon its length, picks a random number between 1 and the length of the array and returns a variable rand.
+*/
 var randomPick = function(arr) {
   var min = Math.ceil(arr.length - arr.length);
   var max = Math.floor(arr.length);
   var rand =  Math.floor(Math.random() * (max - min) + 1) + min;
-  //console.log(Math.ceil(arr.length - arr.length)); //TESTING
-  //console.log(Math.floor(arr.length)); //TESTING
-  //console.log(min); //TESTING
-  //console.log(max); //TESTIN
-  //console.log(rand); //TESTING
   return rand;
 }
 
-
-//Will choose an array from the array passed as an argument
+//Will choose an array element from the array passed as an argument
 var p = randomPick(qArray) - 1;
-console.log(p); //TESTING ONLY
 
-var getArray = (qArray[p]);//stores selected object from Question Object array
-console.log(getArray);
+var getArray = qArray[p];//stores selected object from Question Object array
 var askedQuestion = getArray[0].question;
-console.log(askedQuestion + 'is question');//log the question to the consoles
+console.log(askedQuestion);//log the question to the console
+var possAnswers = getArray[0].possAnswersArray;
 
-console.log(getArray[0].possAnswersArray); //access the object's array
-//console.log(getArray[0].possAnswersArray[2]);//access an element of array
-console.log('Correct answer index is: ' + getArray[0].correctAnswerIndex);
+var correctAnswer = getArray[0].correctAnswerIndex;
+
 
 //this returns a random number based on the number of items in the array
 //this is used to choose a random array from a list of arrays (qArray)
-//value should be between 1 and the total number of arrays
+//value should be between 1 andc the total number of arrays
 
+function loopAnswers(arr){
+  for (var i = 0; i < arr.length; i++) {
+    console.log(arr[i]);
+  }
+}
+loopAnswers(possAnswers);
+
+
+
+
+//test for correct guess
+testGuess = 2;
+if((testGuess - 1) === correctAnswer) {
+  console.log('You are correct!');
+} else {
+  console.log ('Guess again');
+};
 
 
 
@@ -81,7 +90,7 @@ console.log(q1.correctAnswerIndex);
 ***/
 
 //Loops through an array and logs each member
-
+/*
 function loopAnswers(questionNo, arr){
   for (var i = 0; i < arr.length; i++) {
     console.log(arr[i]);
@@ -98,3 +107,4 @@ if((testGuess - 1) === q3.correctAnswerIndex) {
 } else {
   console.log ('Guess again');
 };
+*/
