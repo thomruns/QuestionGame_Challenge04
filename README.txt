@@ -15,3 +15,7 @@ Needed next: prompt functionality
 
 6/29/17 1:37pm Added:
   fifth question to test functionality of Question constructor
+
+  6/29/17 5:50pm Added:
+    IIFE protection
+    Additional question
